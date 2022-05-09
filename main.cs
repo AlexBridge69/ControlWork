@@ -15,6 +15,25 @@ class Program
         return NumberOfElements;
     }
 
+    static void Print(string[] array)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (i = 0)
+            {
+                Console.Write($"[{array[i]}, ");
+            }
+            else if (i < array.Length - 1)
+            {
+                Console.Write($"{array[i]}, ");
+            }
+            else if (i == array.Length - 1)
+            {
+                Console.Write($"{array[i]}]");
+            }
+        }
+    }
+
     static void FillingArrayOfResults(string[] arrayInput, string[] arrayRes)
     {
         int desiredSizeOfElement = 3;
@@ -32,7 +51,7 @@ class Program
             indexOfArrayInput += 1;
         }
         Print(arrayRes);
-    }
+  }
   
     public static void Main()
     {
