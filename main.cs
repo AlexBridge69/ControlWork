@@ -42,7 +42,6 @@ class Program
 
     static void FillingArrayOfResults(string[] arrayInput, string[] arrayRes)
     {
-        Print(arrayInput);
         int desiredSizeOfElement = 3;
         int sizeOfInputArray = arrayInput.Length;
         int indexOfArrayInput = 0;
@@ -64,41 +63,50 @@ class Program
     {
         string[] arrayExample1 = { "hello", "2", "world", ":-)" };
         string[] arrayExample2 = { "1234", "1567", "-2", "computer science" };
-        string[] arrayExample3 = { "Russia", "Denmark", "Kazan", "Tver" };
+        string[] arrayExample3 = { "Russia", "Denmark", "Kazan", "Tver" }; // Так как я живу Твери, то позволил себе внести небольшое дополнение в этот массив, упомянув в нём свой родной город.
 
-        int numberOfElemntsInExample1 = NumberOfElementsForNewArray(arrayInput: arrayExample1);
+        Print(arrayExample1);
+        int numberOfElemntsInExample1 = NumberOfElementsForNewArray(arrayExample1);
         if (numberOfElemntsInExample1 > 0)
         {
             string[] ResultArray1 = new string[numberOfElemntsInExample1];
-            FillingArrayOfResults(arrayInput: arrayExample1, arrayRes: ResultArray1);
+            FillingArrayOfResults(
+              arrayInput: arrayExample1,
+              arrayRes: ResultArray1
+            );
         }
-        else if (numberOfElemntsInExample1 == 0)
+        else
         {
-            Print(arrayExample1);
             Console.WriteLine($"[]");
         }
 
-        int numberOfElemntsInExample2 = NumberOfElementsForNewArray(arrayInput: arrayExample2);
+        Print(arrayExample2);
+        int numberOfElemntsInExample2 = NumberOfElementsForNewArray(arrayExample2);
         if (numberOfElemntsInExample2 > 0)
         {
             string[] ResultArray2 = new string[numberOfElemntsInExample2];
-            FillingArrayOfResults(arrayInput: arrayExample2, arrayRes: ResultArray2);
+            FillingArrayOfResults(
+              arrayInput: arrayExample2,
+              arrayRes: ResultArray2
+            );
         }
-        else if (numberOfElemntsInExample2 == 0)
+        else
         {
-            Print(arrayExample2);
             Console.WriteLine($"[]");
         }
 
-        int numberOfElemntsInExample3 = NumberOfElementsForNewArray(arrayInput: arrayExample3);
+        Print(arrayExample3);
+        int numberOfElemntsInExample3 = NumberOfElementsForNewArray(arrayExample3);
         if (numberOfElemntsInExample3 != 0)
         {
             string[] ResultArray3 = new string[numberOfElemntsInExample3];
-            FillingArrayOfResults(arrayInput: arrayExample3, arrayRes: ResultArray3);
+            FillingArrayOfResults(
+              arrayInput: arrayExample3,
+              arrayRes: ResultArray3
+            );
         }
-        else if (numberOfElemntsInExample3 == 0)
+        else
         {
-            Print(arrayExample3);
             Console.WriteLine($"[]");
         }
     }
