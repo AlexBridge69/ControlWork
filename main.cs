@@ -65,9 +65,31 @@ class Program
             string[] ResultArray1 = new string[numberOfElemntsInExample1];
             FillingArrayOfResults(arrayInput: arrayExample1, arrayRes: ResultArray1);
         }
-      else
-      {
-        Console.WriteLine("[]");
-      }
+        else
+        {
+            Console.WriteLine("[]");
+        }
+
+        int numberOfElemntsInExample2 = NumberOfElementsForNewArray(arrayInput: arrayExample2);
+        if (numberOfElemntsInExample1 > 0)
+        {
+            string[] ResultArray2 = new string[numberOfElemntsInExample2];
+            FillingArrayOfResults(arrayInput: arrayExample2, arrayRes: ResultArray2);
+        }
+        else
+        {
+            Console.WriteLine("[]");
+        }
+
+        int numberOfElemntsInExample3 = NumberOfElementsForNewArray(arrayInput: arrayExample3);
+        if (numberOfElemntsInExample1 != 0)
+        {
+            string[] ResultArray3 = new string[numberOfElemntsInExample3];
+            FillingArrayOfResults(arrayInput: arrayExample3, arrayRes: ResultArray3);
+        }
+        else
+        {
+            Console.WriteLine("[]");
+        }
     }
 }
