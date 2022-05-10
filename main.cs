@@ -51,10 +51,23 @@ class Program
             indexOfArrayInput += 1;
         }
         Print(arrayRes);
-  }
-  
+    }
+
     public static void Main()
     {
+        string[] arrayExample1 = { "hello", "2", "world", ":-)" };
+        string[] arrayExample2 = { "1234", "1567", "-2", "computer science" };
+        string[] arrayExample3 = { "Russia", "Denmark", "Kazan" };
 
+        int numberOfElemntsInExample1 = NumberOfElementsForNewArray(arrayInput: arrayExample1);
+        if (numberOfElemntsInExample1 > 0)
+        {
+            string[] ResultArray1 = new string[numberOfElemntsInExample1];
+            FillingArrayOfResults(arrayInput: arrayExample1, arrayRes: ResultArray1);
+        }
+      else
+      {
+        Console.WriteLine("[]");
+      }
     }
 }
